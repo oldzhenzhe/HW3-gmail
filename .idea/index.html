@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmail 登入</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f7fa;
+    }
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 600px;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .right-section {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: space-between;
+      min-height: 200px;
+    }
+    .logo img {
+      width: 120px;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 0;
+      color: #202124;
+    }
+    p {
+      font-size: 14px;
+      color: #5f6368;
+      margin: 0;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      margin-top: 34px;
+    }
+    input {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      outline: none;
+    }
+    input:focus {
+      border-color: #1a73e8;
+    }
+    .help-text-blue {
+      font-size: 12px;
+      color: #1a73e8;
+    }
+    .help-text-black {
+      font-size: 12px;
+      color: #202124;
+    }
+    .button-group {
+      display: flex;
+      gap: 10px;
+      align-self: flex-end;
+    }
+    button {
+      background-color: #1a73e8;
+      color: white;
+      padding: 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100px;
+    }
+    .create-account-btn {
+      background-color: white;
+      color: #1a73e8;
+    }
+
+  </style>
+</head>
+<body>
+<div class="login-container">
+  <div class="left-section">
+    <div class="logo">
+      <img src="google.png" alt="Google Logo">
+    </div>
+    <h1>登入</h1>
+    <p>繼續使用 Gmail</p>
+  </div>
+  <div class="right-section">
+    <div class="input-group">
+      <input type="email" id="email" placeholder="電子郵件地址或電話號碼" required>
+      <p class="help-text-blue">忘記電子郵件地址？</p>
+      <p class="help-text-black">如果這不是你的電腦，請使用訪客模式以私密方式登入。</p>
+      <p class="help-text-blue"> 進一步瞭解如何使用訪客模式</p>
+    </div>
+    <div class="button-group">
+      <button class="create-account-btn" onclick="login()">建立帳戶</button>
+      <button onclick="login()">下一步</button>
+    </div>
+  </div>
+</div>
+<script>
+  function login() {
+    const email = document.getElementById('email').value;
+    if (email) {
+      console.log('登入嘗試', { email });
+    }
+  }
+</script>
+</body>
+</html>
