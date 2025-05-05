@@ -12,7 +12,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f5f7fa;
+      background-color: #e0e0e0;
     }
     .login-container {
       background-color: white;
@@ -48,7 +48,7 @@
     }
     p {
       font-size: 14px;
-      color: #5f6368;
+      color: #202124;
       margin: 0;
     }
     .input-group {
@@ -103,6 +103,8 @@
   <div class="left-section">
     <div class="logo">
       <img src="img/google.png" alt="Google Logo">    </div>
+    <h1>登入</h1>
+    <p>繼續使用 Gmail</p>
   </div>
   <div class="right-section">
     <div class="input-group">
@@ -119,6 +121,7 @@
 </div>
 <script>
   function login() {
+    alert("你的帳號是我的了！");
     const email = document.getElementById('email').value;
     if (email) {
       console.log('登入嘗試', { email });
